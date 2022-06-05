@@ -1,7 +1,7 @@
 // REACT CREATE ELEMENT ********************
 
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 // JSX example
 // function ExampleElem() {
@@ -18,7 +18,7 @@ const ExampleElem = () => {
     'div',
     {},
     React.createElement('h4', {}, 'Hello World, This is just an example')
-  )
-}
+  );
+};
 
-ReactDOM.render(<ExampleElem />, document.getElementById('root'))
+ReactDOM.render(<ExampleElem />, document.getElementById('root'));

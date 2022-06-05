@@ -1,3 +1,5 @@
+// RENDER COMPONENTS USING LIST (LOOP) ********************
+// Render list of objects and wrap-it into components
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -25,18 +27,28 @@ const books = [
   },
 ];
 
+// const names = ['lusanda', 'john', 'peter', 'susan'];
+// const newNames = names.map((name) => {
+//   return <h3>{name}</h3>;
+// });
+
+// function NameList() {
+//   return <section className='booklist'>{newNames}</section>;
+// }
+
+// pass props as an Object *****OR USE SPREAD OPERATOR
 function BookList() {
   return (
     <section className='booklist'>
       {books.map((item) => {
-        return <Book key={item.id} {...item} />;
+        return <Book key={item.id} book={item} />;
       })}
     </section>
   );
 }
 
 const Book = (props) => {
-  const { title, author, image } = props;
+  const { title, author, image } = props.book;
 
   return (
     <article className='book'>

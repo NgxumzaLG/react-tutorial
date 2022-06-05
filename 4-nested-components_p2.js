@@ -1,10 +1,10 @@
 // NESTED COMPONENTS PART 2 ********************
 
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 // CSS
-import './index.css'
+import './index.css';
 
 function BookList() {
   return (
@@ -16,7 +16,7 @@ function BookList() {
       <Book />
       <Book />
     </section>
-  )
+  );
 }
 
 const Book = () => {
@@ -26,8 +26,8 @@ const Book = () => {
       <Title />
       <Author />
     </article>
-  )
-}
+  );
+};
 
 const Image = () => {
   return (
@@ -35,12 +35,12 @@ const Image = () => {
       src='https://littleslothco.co.za/3237-medium_default/i-love-you-to-the-moon-and-back-by-amelia-hepworth.jpg'
       alt=''
     />
-  )
-}
+  );
+};
 
-const Title = () => <h3>I Love You to the Moon and Back</h3>
+const Title = () => <h3>I Love You to the Moon and Back</h3>;
 const Author = () => (
   <h5 style={{ color: '#617d98', marginTop: '0.25rem' }}>Amelia Hepworth</h5>
-)
+);
 
-ReactDOM.render(<BookList />, document.getElementById('root'))
+ReactDOM.render(<BookList />, document.getElementById('root'));

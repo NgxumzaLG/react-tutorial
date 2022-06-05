@@ -1,7 +1,7 @@
 // NESTED COMPONENTS PART 1 ********************
 
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 function Greeting3() {
   return (
@@ -9,13 +9,13 @@ function Greeting3() {
       <Person />
       <Message />
     </div>
-  )
+  );
 }
 
-const Person = () => <h3>Lusanda Ngxumza</h3>
+const Person = () => <h3>Lusanda Ngxumza</h3>;
 const Message = () => {
-  return <p>From me to you and only you</p>
-}
+  return <p>From me to you and only you</p>;
+};
 
 // function BookList() {
 //   return (
@@ -47,4 +47,4 @@ const Message = () => {
 // const Title = () => <h3>I Love You to the Moon and Back</h3>
 // const Author = () => <h5>Amelia Hepworth</h5>
 
-ReactDOM.render(<Greeting3 />, document.getElementById('root'))
+ReactDOM.render(<Greeting3 />, document.getElementById('root'));

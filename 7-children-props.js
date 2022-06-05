@@ -1,13 +1,10 @@
-// PROPS OBJECT (COMPONENT PARAMETER OBJECT) ********************
-// The parameter is the object and you can pass key/value pairs
+// CHILDREN PROPS ********************
+// children props is a special name, that said you cannot rename it or won't be able to access it or use it
+// children can be rendered anywhere in the component setup scope
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-
-// const title = 'I Love You to the Moon and Back'
-// const author = 'Amelia Hepworth'
-// const image = 'https://littleslothco.co.za/3237-medium_default/i-love-you-to-the-moon-and-back-by-amelia-hepworth.jpg'
 
 const firstBook = {
   title: 'I Love You to the Moon and Back',
@@ -29,7 +26,12 @@ function BookList() {
         title={firstBook.title}
         author={firstBook.author}
         image={firstBook.image}
-      />
+      >
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dolor quae
+          repellendus, ad sint corrupti illum temporibus dolorem nisi vel!
+        </p>
+      </Book>
       <Book
         title={secondBook.title}
         author={secondBook.author}
@@ -39,39 +41,17 @@ function BookList() {
   );
 }
 
-// const Book = ({ title, author, image }) => {} *****OR Use deconstruction like this
 const Book = (props) => {
-  const { title, author, image } = props;
+  const { title, author, image, children } = props;
 
   return (
     <article className='book'>
       <img src={image} alt='' />
       <h3>{title}</h3>
       <h5>{author}</h5>
+      {children}
     </article>
   );
 };
-
-// function BookList() {
-//   return (
-//     <section className='booklist'>
-//       <Book job='Developer' />
-//       <Book title='random title' number={44} />
-//     </section>
-//   )
-// }
-
-// const Book = (props) => {
-//   return (
-//     <article className='book'>
-//       <img src={image} alt='' />
-//       <h3>{title}</h3>
-//       <h5>{author}</h5>
-//       <p>{props.title}</p>
-//       <p>{props.job}</p>
-//       <p>{props.number}</p>
-//     </article>
-//   )
-// }
 
 ReactDOM.render(<BookList />, document.getElementById('root'));
